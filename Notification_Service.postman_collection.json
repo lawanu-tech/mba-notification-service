@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "63c40ff6-d05c-4226-9ca1-5718fb27c441",
+		"name": "Notification_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ticketId\": \"123\",\r\n    \"subject\": \"Test email subject\",\r\n    \"content\": \"This is a test email sent using notification service\",\r\n    \"recepientEmails\": [\"abc@gmail.com\", \"pqr@yahoomail.com\"],\r\n    \"requester\": \"456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/notificationService/api/v1/notification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"notificationService",
+						"api",
+						"v1",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notification By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/notificationService/api/v1/notification/646e41facd00cf9d3c56db28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"notificationService",
+						"api",
+						"v1",
+						"notification",
+						"646e41facd00cf9d3c56db28"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
